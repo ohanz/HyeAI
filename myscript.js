@@ -13,7 +13,8 @@ getQuoteBtn.classList.remove("loading");
 getQuoteBtn.textContent = "Get Quote";
 
 function getQuote() {
-    fetch("https://api.quotable.io/random")
+    // https://api.quotable.io/random
+    fetch("https://api.api-ninjas.com/v1/quotes")
         .then((response) => response.json())
         .then((data) => {
             quoteText.innerHTML = `"${data.content}" - ${data.author}`;
